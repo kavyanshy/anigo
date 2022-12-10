@@ -1,0 +1,104 @@
+.container {
+    width: 100%;
+    display: flex;
+    overflow: auto;
+    min-height: 100vh;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .container1 {
+    flex: 0 0 auto;
+    width: 100%;
+    height: 1010px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #353434;
+  }
+  .container2 {
+    width: 100%;
+    height: 364px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .image {
+    width: 100%;
+    height: 578px;
+    margin-top: var(--dl-space-space-oneandhalfunits);
+    object-fit: cover;
+  }
+  .container3 {
+    width: 1127px;
+    height: 437px;
+    display: flex;
+    box-shadow: 0px -50px 1000px 200px #020202;
+    align-items: center;
+    justify-content: flex-start;
+    background-color: #1c1919;
+  }
+  .container4 {
+    flex: 0 0 auto;
+    width: 783px;
+    height: 100%;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+  .text {
+    color: #ebe6e6;
+    width: 100%;
+    font-size: xxx-large;
+    font-style: normal;
+    margin-top: var(--dl-space-space-unit);
+    text-align: left;
+    font-family: Montserrat;
+    font-weight: 800;
+    margin-left: var(--dl-space-space-unit);
+    text-transform: uppercase;
+  }
+  .container5 {
+    width: 100%;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+  }
+  .text4 {
+    color: #dfdede;
+    font-size: 15px;
+  }
+  .container6 {
+    width: 100%;
+    height: 253px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .container7 {
+    flex: 0 0 auto;
+    width: 420px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .container8 {
+    flex: 0 0 auto;
+    width: 349px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .image1 {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
