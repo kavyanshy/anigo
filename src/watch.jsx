@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Button } from "@mui/material";
 import { useParams} from 'react-router-dom'
-import ReactHlsPlayer from 'react-hls-player';
+import Player from "./Player";
 import SimpleBottomNavigation from "./Bottom";
 
 
@@ -23,16 +23,35 @@ export default function Watch() {
     }, [])
 
 
+    useScript("/home/kingk20k/website/notesappvite/src/playerjs.js");
+    function useScript(url) {
+      useEffect(() => {
+        const script = document.createElement("script");
+        script.src = url;
+        script.async = true;
+        document.body.appendChild(script);
+        return () => {
+          document.body.removeChild(script);
+        };
+      }, [url]);
+    }
+    
+   
+
 
     function Episode(props){
 
 
 
-        function getepisodeurl(){
-            fetch("https://gogoanime.consumet.org/vidcdn/watch/"+props.id)
+        async function getepisodeurl(){
+            await fetch("https://gogoanime.consumet.org/vidcdn/watch/"+props.id)
   .then((response) => response.json())
   .then((animelist) => setepurl(animelist.sources[0].file));
-        }
+  if (window.pljssglobal.length > 0) {
+    window.pljssglobal[0].api("play", epurl);
+          
+        }}
+        
 
         return(
             <Button onClick={getepisodeurl}>{props.id}</Button>
@@ -44,18 +63,15 @@ export default function Watch() {
     }
     
     
+    
   return (
     <>
-    <SimpleBottomNavigation/>
-    <div>{id.id}</div>
-    <ReactHlsPlayer
-    src={epurl}
-    autoPlay={true}
-    controls={true}
-    width="100%"
-    height="auto"
     
-  />,
+    <SimpleBottomNavigation/>
+    <div className="App">
+    <h1>{id.id}</h1>
+    <div id="player"></div>
+    </div>
 
     {
         

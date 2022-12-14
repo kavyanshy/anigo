@@ -1,10 +1,5 @@
 import * as React  from 'react';
-import Card from '@mui/material/Card';
-import CardActions from '@mui/material/CardActions';
-import CardContent from '@mui/material/CardContent';
-import CardMedia from '@mui/material/CardMedia';
-import Button from '@mui/material/Button';
-import Typography from '@mui/material/Typography';
+import { Card, Icon, Image } from 'semantic-ui-react'
 import { useNavigate } from "react-router-dom";
 import { motion } from "framer-motion"
 
@@ -18,7 +13,7 @@ export default function MediaCard(props) {
      setload(false)
      console.log(loading)
    
-   }, [])
+   }, [loading])
    
   function forward(){
     navigate("/info/"+props.animeId)
@@ -28,44 +23,39 @@ export default function MediaCard(props) {
   return (
     <>
     <motion.div  
-      whileHover={{scale:1.2}}
+      whileHover={{scale:1.01}}
+      style={{
+        
+       
+      }}
+
+      
     
     >
-    <Card
-    style={{
-      minHeight:"300px",
-      minWidth:"400px",
-      maxWidth:"400px",
-      maxHeight:"300px",
-      backgroundColor:"#323232",
-      marginRight:"6px",
-      marginTop:"10px"
-    }}
-    >
-      <CardMedia
-        component="img"
-        height="140"
-        image={props.image}
-        alt="green iguana"
-        
-      />
-      <CardContent>
-        <Typography 
-        style={text}
-        gutterBottom variant="h5" component="div">
-          {props.title}
-        </Typography>
-        <Typography
-        style={text}
-        variant="body2" color="text.secondary">
-          Episode num:{props.episodenum}
-        </Typography>
-      </CardContent>
-      <CardActions>
-        <Button size="small">Share</Button>
-        <Button size="small" onClick={forward}>Learn More</Button>
-      </CardActions>
-    </Card>
+    <Card className='bg-black mr-10'  style={{
+      "backgroundColor":"grey",
+      "margin":"10px",
+      maxHeight:"600px"
+       
+
+    }} onClick={forward}>
+    <Image src={props.image} wrapped ui={false} style={{
+      maxHeight:"403px"
+    }}/>
+    <Card.Content>
+      <Card.Header>{props.title}</Card.Header>
+      <Card.Meta>Joined in 2016</Card.Meta>
+      <Card.Description>
+        {props.episodenum}
+      </Card.Description>
+    </Card.Content>
+    <Card.Content extra>
+      <a>
+        <Icon name='user' />
+        10 Friends
+      </a>
+    </Card.Content>
+  </Card>
     </motion.div>
     </>
   );

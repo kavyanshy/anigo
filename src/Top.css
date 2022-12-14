@@ -1,0 +1,36 @@
+.top-b{
+    color: aqua;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-left: 50%;
+    background-color: rgb(70, 68, 68);
+    align-self: center;
+
+}
+.top-d{
+    display: flex;
+
+}
+
+.icon-b{
+    height: 30px;
+    background-color: antiquewhite;
+    box-shadow: 10px black;
+    margin: 4px;
+    transition: margin 2s;
+}
+
+.icon-b :hover{
+    background-color: black;
+}
+.iocn-d{
+    
+    color: black;
+    transition: color 2s;
+
+}
+
+.iocn-d :hover{
+    color: aqua;
+}

@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import reactLogo from './assets/react.svg'
+import 'semantic-ui-css/semantic.min.css'
 import './App.css'
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Button from '@mui/material/Button';
@@ -9,12 +10,20 @@ import Watch from './watch';
 import Search from './Search';
 import Info from "./Info"
 import Sign from '../Sign';
+import Player from './Player';
+
+
 function App() {
   const [count, setCount] = useState(0)
 
   return (
-    <BrowserRouter>
+    <>
+     <Player id="player" file="https://plrjs.com/sample.mp4"/>
+    <BrowserRouter className="bg-slate-600" style={{
+      backgrondColor:"black"
+    }}>
       <Routes>
+        
         <Route path="/" element={<Home />}/>
          <Route path="/watch/:id" element={<Watch/>}/>
          <Route path="/info/:id" element={<Info/>}/> 
@@ -23,6 +32,7 @@ function App() {
         
       </Routes>
     </BrowserRouter>
+    </>
   )
 }
 export default App

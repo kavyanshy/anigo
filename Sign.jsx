@@ -22,6 +22,7 @@ export default function Sign() {
   return (
     <>
     <div>Sign</div>
+    
     <Button onClick={signInWithGoogle}>SIGN IN</Button>
     </>
   )
