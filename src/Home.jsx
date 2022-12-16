@@ -6,10 +6,14 @@ import { Button } from '@mui/material'
 import { auth } from '../Firebase'
 import { useAuthState } from 'react-firebase-hooks/auth'
 import { Link, useNavigate } from "react-router-dom";
-
+import Slider from "./Slider"
 import Grid from '@mui/material/Grid';
+
 import "./App.css"
+
 import Topbar from './Topbar'
+
+
 export default function Home() {
 
 const [name,setname]=useState([])
@@ -50,13 +54,16 @@ function previous(){
 
 function name11(){
   console.log(user)
+  
 }
 
   return (
     <>
     <Topbar/>
+    <Slider/>
+   
     <div className='bg-black'>Home</div>
-    <Button onClick={name11}>name</Button>
+    <Button sx={{color:"white",backgroundColor:"red",}}onClick={name11}>name</Button>
     <Button onClick={previous}>previous</Button>
     <Button onClick={next}>next</Button>
     <Button onClick={()=>setpage(page)}>set</Button>

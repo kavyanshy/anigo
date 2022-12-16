@@ -1,36 +1,75 @@
-.top-b{
-    color: aqua;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    margin-left: 50%;
-    background-color: rgb(70, 68, 68);
-    align-self: center;
-
-}
 .top-d{
     display: flex;
+    flex-direction: row;
+    background-color: #080808;
+    align-items: flex-start;
+    margin-left: 30px;
+    margin-right: 30px;
+    margin-bottom: 40px;
+    margin-top: 10px;
+    border-radius: 20px;
+    padding: 10px;
+    border-color: wheat;
+    box-shadow: 2px 1px 200px rgb(129, 129, 126);
+    opacity: 70%;
+    position: relative;
+    justify-content: center;
+}   
 
-}
-
-.icon-b{
-    height: 30px;
-    background-color: antiquewhite;
-    box-shadow: 10px black;
-    margin: 4px;
-    transition: margin 2s;
-}
-
-.icon-b :hover{
-    background-color: black;
-}
-.iocn-d{
+.container{
+    background-color:  rgb(27, 27, 27);
+    width: 200px;
+    border-radius: 20px;
     
-    color: black;
-    transition: color 2s;
-
+    
 }
 
-.iocn-d :hover{
-    color: aqua;
+.toggle{
+    
+    position: absolute;
+    left: 0px;
+    margin-left:10px ;
+    background-color: rgb(27, 27, 27);
+    border-radius: 20px;
+
+}
+.toggle1{
+    
+    position: absolute;
+    right: 0px;
+    margin-left:10px ;
+    background-color: rgb(27, 27, 27);
+    border-radius: 20px;
+    margin-right: 10px;
+}
+
+.menu{
+    
+    position: absolute;
+    display: flex;
+    height: 100%;
+    width: 100%;
+    z-index: 2;
+}
+
+.menu1{
+    background-color: rgb(10, 10, 10);
+    width: 70%;
+} 
+.munubg{
+    background-color: rgb(24, 23, 23);
+    opacity: 80%;
+    width: 100%;
+}
+
+.menu-b{
+    color: aliceblue;
+    background-color: #2e2e2e;
+    padding: 10px;
+    border-color: aliceblue;
+    border: 0px 0px 0px 1px;
+    border-width: 1px;
+    justify-content: center;
+    text-align: center;
+    font-family: "Audiowide", sans-serif;
 }

@@ -1,7 +1,11 @@
 import { useState } from 'react'
 import reactLogo from './assets/react.svg'
+// Default theme. ~960B
+import '@vime/core/themes/default.css';
 import 'semantic-ui-css/semantic.min.css'
 import './App.css'
+
+
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Button from '@mui/material/Button';
 // Material Kit 2 React Components
@@ -10,7 +14,7 @@ import Watch from './watch';
 import Search from './Search';
 import Info from "./Info"
 import Sign from '../Sign';
-import Player from './Player';
+
 
 
 function App() {
@@ -18,7 +22,7 @@ function App() {
 
   return (
     <>
-     <Player id="player" file="https://plrjs.com/sample.mp4"/>
+
     <BrowserRouter className="bg-slate-600" style={{
       backgrondColor:"black"
     }}>

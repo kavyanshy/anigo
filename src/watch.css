@@ -1,0 +1,59 @@
+.episodemenu{
+    display: flex;
+    position: relative;
+    left: 100px;
+    background-color: rgb(29, 29, 29);
+    margin-top: 5px;
+   
+}
+.epmenu{
+    justify-content: center;
+    background-color: rgb(13, 13, 14);
+    margin-top: 10px;
+    margin-left: 20px;
+    border-radius: 20px;
+}
+
+.headlineep{
+    font-size: 50px;
+    color: azure;
+    font-family: "Audiowide", sans-serif;
+}
+
+.topcard{
+    display: flex;
+    background-color: rgb(22, 22, 22);
+    background-size:cover;
+    margin-bottom: 20px;
+    border-radius: 20px;
+    margin-left: 20px;
+    height: 200px;
+    
+   
+}
+.tleft{
+    overflow: visible;
+}
+
+.topcard h1 {
+    font-size: 40px;
+    color: aliceblue;
+    font-family: "Audiowide", sans-serif;
+}
+
+.topcard p {
+    color: azure;
+    opacity: 30%;
+}
+
+.tright{
+    height: 100px;
+    margin-right: 20px;
+    margin-top: 10px;
+
+}
+
+.topcard h3 {
+    color: beige;
+    font-size: 13px;
+}

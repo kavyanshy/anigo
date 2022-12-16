@@ -61,7 +61,7 @@ export default function Search() {
   return (
     <>
     
-    <SimpleBottomNavigation/>
+    <Topbar/>
     <div>Search</div>
     <Button onClick={previous}>previous</Button>
     <Button onClick={next}>next</Button>
