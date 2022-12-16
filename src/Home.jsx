@@ -30,7 +30,7 @@ useEffect(() => {
     return;
   }
   if (user) navigate("/");
-
+  else{navigate("/Sign")}
   fetch("https://gogoanime.consumet.org/recent-release/?page="+page)
   .then((response) => response.json())
   .then((animelist) => setname(animelist));
